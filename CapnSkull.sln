@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapnSkull", "CapnSkull\CapnSkull.csproj", "{77D78DE9-C1A1-45B3-83A9-96108A1091DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapnSkull.Tests", "CapnSkull.Tests\CapnSkull.Tests.csproj", "{1BBF017F-E158-4079-9DF2-15EEE9608218}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D78DE9-C1A1-45B3-83A9-96108A1091DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D78DE9-C1A1-45B3-83A9-96108A1091DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D78DE9-C1A1-45B3-83A9-96108A1091DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D78DE9-C1A1-45B3-83A9-96108A1091DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBF017F-E158-4079-9DF2-15EEE9608218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBF017F-E158-4079-9DF2-15EEE9608218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBF017F-E158-4079-9DF2-15EEE9608218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBF017F-E158-4079-9DF2-15EEE9608218}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
