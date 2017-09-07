@@ -1,0 +1,24 @@
+﻿@using CapnSkull.ExtensionMethods
+@model CapnSkull.Models.Person
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Report</h2>
+<dl class="dl-horizontal">
+    <dt>First Vowel In First Name</dt>
+    <dd>@Model.FirstName.FirstVowel()</dd>
+    
+    <dt>First Letter In First Name</dt>
+    <dd>@Model.FirstName.FirstLetter()]</dd>
+    
+    <dt>Last Letter In First Name</dt>
+    <dd>@Model.FirstName.LastLetter()</dd>
+    
+    @for (var i = 1; i < Model.FirstName.Length - 2; i++)
+    {
+        <dt>Middle Letter</dt>
+        <dd>@Model.FirstName[i]</dd>
+    }
+</dl>

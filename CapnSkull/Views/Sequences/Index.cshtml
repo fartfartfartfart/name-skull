@@ -1,0 +1,111 @@
+﻿@model CapnSkull.Models.SequenceIndexViewModel
+@{
+    ViewBag.Title = "Decode Name";
+}
+
+@using (Html.BeginForm("Report","Sequences",null))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2>Decode Name</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Person.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Person.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Person.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Person.MiddleName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Person.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Person.MiddleName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Person.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Person.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Person.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Person.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Person.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Person.Nickname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Decode" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<hr/>
+<h2>Sequences</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().Characters)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().DefaultInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().BeginningInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().MiddleInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().EndInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequences.FirstOrDefault().FirstVowelInfo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Sequences) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Characters)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefaultInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeginningInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstVowelInfo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) <br/>
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) <br />
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

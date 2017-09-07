@@ -1,0 +1,65 @@
+﻿@model CapnSkull.Models.Sequence
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sequence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Characters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Characters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefaultInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefaultInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeginningInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeginningInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstVowelInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstVowelInfo)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,43 @@
+﻿@model CapnSkull.Models.NameSection
+@using CapnSkull.Extensions
+<hr />
+<h2>@Model.Title</h2>
+<h3>@Model.Name</h3>
+<table class="table table-bordered table-condensed table-responsive">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Letter/Squence</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Vowel</td>
+            <td><strong>@Model.Name.FirstVowel()</strong></td>
+            <td>@Model.FirstVowelInfo</td>
+        </tr>
+        <tr>
+            <td>First Letter</td>
+            <td><strong>@Model.Name.FirstLetter()</strong></td>
+            <td>@Model.FirstLetterInfo</td>
+        </tr>
+        <tr>
+            <td>Last Letter</td>
+            <td><strong>@Model.Name.LastLetter()</strong></td>
+            <td>@Model.LastLetterInfo</td>
+        </tr>
+        @foreach (var item in Model.MiddleLettersInfo)
+        {
+            if (!item.Equals(@Model.Name.FirstVowel()))
+            {
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;Middle Letter</td>
+                    <td><strong>@item.Key</strong></td>
+                    <td>@item.Value</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
